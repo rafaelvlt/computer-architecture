@@ -1,0 +1,7 @@
+int i=7;
+int j=8;
+if(i==j):
+ f=g+h
+else: 
+ f=g-h
+end
