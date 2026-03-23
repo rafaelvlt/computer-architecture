@@ -12,7 +12,7 @@ halt
 
 a: .word 0x6
 b: .word 0xf
-c: .word 0x0000
+m: .word 0x0000
 
 
 //se a=6 b=15 m=6
