@@ -1,9 +1,0 @@
-int i=5;int j=5;
-int G=3;int h=2;
-int f=0;
-
-if(i==j):
- f=g+h
-else: 
- f=g-h
-end
