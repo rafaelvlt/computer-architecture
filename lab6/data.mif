@@ -1,0 +1,39 @@
+-- =============================================================================
+-- data.mif
+-- Data Memory initialization - MMIO test program
+--
+-- Word address = byte_address / 4  (sc_dmem uses alu_result[9:2])
+--
+-- Initial values read by program.mif:
+--   word 000 (byte  0) : 0x00000400 = MMIO base address
+--   word 001 (byte  4) : 0x00000001 = for incremente/decrement with add and sub
+--   word 002 (byte  8) : 0x0000000D = mask for button 1
+--   word 003 (byte 12) : 0x0000000B = mask for button 2
+--   word 004 (byte 16) : 0x00000007 = mask for button 3
+--   word 005 (byte 20) , 0x0000000F = todos soltos
+--
+-- Values written at runtime by the program (sw instructions):
+--   word 003 (byte 12) : SW[17:0]  value  -> sw x4, 12(x0)
+--   word 004 (byte 16) : KEY[3:0]  value  -> sw x5, 16(x0)
+-- =============================================================================
+
+DEPTH = 256;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+BEGIN
+
+000 : 00000400;  -- MMIO base address
+001 : 00000001;  -- for incremente/decrement with add and sub
+002 : 0000000F;  -- todos soltos
+003 : 0000000E;  -- button 0
+004 : 0000000D;  -- button 1
+005 : 0000000B;  -- button 2
+006 : 00000007;  -- button 3
+007 : 0000000F;  -- todos soltos
+
+[008..0FF] : 00000000;
+
+END;

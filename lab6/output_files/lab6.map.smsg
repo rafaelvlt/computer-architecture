@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at sc_control.sv(41): object "Branch" differs only in case from object "BRANCH" in the same scope File: C:/Users/rabs4/Documents/rv_sc_cpu_mmio/sc_control.sv Line: 41

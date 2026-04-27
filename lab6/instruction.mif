@@ -1,0 +1,33 @@
+DEPTH = 256;            -- The size of memory in words
+WIDTH = 32;             -- The size of data in bits
+ADDRESS_RADIX = HEX;    -- The radix for address values
+DATA_RADIX = HEX;       -- The radix for data values
+CONTENT                 -- Start of (address: data pairs)
+BEGIN
+
+000 : 00002083;  -- lw x1,0(x0)
+001 : 00402503;  -- lw x10,4(x0)
+002 : 00802583;  -- lw x11,8(x0)
+003 : 00C02603;  -- lw x12,12(x0)
+004 : 01002683;  -- lw x13,16(x0)
+005 : 01402703;  -- lw x14,20(x0)
+006 : 01802783;  -- lw x15,24(x0)
+007 : 000002B3;  -- add x5,x0,x0
+008 : 0040A183;  -- lw x3,4(x1)
+009 : 0040A103;  -- lw x2,4(x1)
+00A : 02310863;  -- beq x2,x3,48
+00B : 00B18463;  -- beq x3,x11,8
+00C : 02000463;  -- beq x0,x0,40
+00D : 02D10063;  -- beq x2,x13,32
+00E : 00E10A63;  -- beq x2,x14,20
+00F : 00F10463;  -- beq x2,x15,8
+010 : 00000C63;  -- beq x0,x0,24
+011 : 00A282B3;  -- add x5,x5,x10
+012 : 00000863;  -- beq x0,x0,16
+013 : 40A282B3;  -- sub x5,x5,x10
+014 : 00000463;  -- beq x0,x0,8
+015 : 000002B3;  -- add x5,x0,x0
+016 : 000101B3;  -- add x3,x2,x0
+017 : 0050A623;  -- sw x5,12(x1)
+018 : FC0002E3;  -- beq x0,x0,-60
+END;
